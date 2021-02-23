@@ -2,6 +2,7 @@ import webbrowser
 from datetime import datetime
 
 ##########################################################################
+##########################################################################
 # Enlaces Google Meet. Pueden variar de usuario a otro, recomiendo revisarlas
 
 mp_teoria = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=1'
@@ -36,7 +37,7 @@ min_ref = 45
 
 if day_name[day] == 'Monday':
 
-    if hora <= hora_ref:
+    if hora < hora_ref:
         webbrowser.open_new_tab(mp_teoria)
     else:
         webbrowser.open_new_tab(mp_pract)
@@ -44,14 +45,9 @@ if day_name[day] == 'Monday':
 ##########################################################################
 # Martes
 
-hora_ref = 17
-
 if day_name[day] == 'Tuesday':
 
-    if hora <= hora_ref:
-        open_url(mp_teoria)
-    else:
-        open_url(fs)
+    open_url(fs)
 
 ##########################################################################
 # Miércoles
