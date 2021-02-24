@@ -5,7 +5,7 @@ from datetime import datetime
 ##########################################################################
 # Enlaces Google Meet. Pueden variar de usuario a otro, recomiendo revisarlas
 
-auth_user = 1
+auth_user = '1'
 
 mp_teoria = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=' + auth_user
 mp_pract = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
@@ -20,6 +20,7 @@ mn = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=' + auth_user
 
 def open_url(url):
     webbrowser.open_new_tab(url)
+
 ##########################################################################
 # Encontramos la hora y dia actual
 
