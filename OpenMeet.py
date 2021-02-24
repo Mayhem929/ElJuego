@@ -5,7 +5,7 @@ from datetime import datetime
 ##########################################################################
 # Enlaces Google Meet. Pueden variar de usuario a otro, recomiendo revisarlas
 
-auth_user = '1'
+auth_user = '5'
 
 mp_teoria = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=' + auth_user
 mp_pract  = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
@@ -17,8 +17,9 @@ edip2     = 'https://meet.google.com/wmb-uufq-kdy?pli=1&authuser=' + auth_user
 edip3     = 'https://meet.google.com/ovy-thqp-gtg?pli=1&authuser=' + auth_user
 mn        = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=' + auth_user
 rr        = 'https://youtu.be/bxqLsrlakK8'
-
-
+ph        = 'https://es.pornhub.com/'
+no_hay    = 'https://www.youtube.com/watch?v=MpqGPJz5aQY'
+si_hay    = 'https://www.youtube.com/watch?v=Vz1-R3UKVuw'
 ##########################################################################
 # Funcion para abrir la pestaña
 
@@ -42,6 +43,7 @@ rkrl = True
 # Lunes
 
 hora_ref = 17
+hora_diablo = 6
 
 if day_name[day] == 'Monday':
 
@@ -49,9 +51,11 @@ if day_name[day] == 'Monday':
         open_url(mp_teoria)
     elif hora_ref < hora < hora_ref + 2:
         open_url(mp_pract)
-    else:
+    elif hora_diablo < hora:
         open_url(rr)
-
+    elif day_name[day] == 'Monday':
+    	open_url(ph)
+	
 ##########################################################################
 # Martes
 
@@ -61,8 +65,10 @@ if day_name[day] == 'Tuesday':
 
     if hora_ref - 2 < hora < hora_ref + 2:
         open_url(fs)
-    else:
+    elif hora_diablo < hora:
         open_url(rr)
+    elif day_name[day] == 'Tuesday':
+        open_url(ph)
 
 ##########################################################################
 # Miércoles
@@ -77,7 +83,11 @@ if day_name[day] == 'Wednesday':
             open_url(asig)
             rkrl = False
         hora_ref += 1
-    if rkrl: open_url(rr)
+    if rkrl and hora_diablo < hora:
+        open_url(rr)
+    elif day_name[day] == 'Wednesday':
+        open_url(ph)
+
 
 ##########################################################################
 # Jueves
@@ -91,7 +101,10 @@ if day_name[day] == 'Thursday':
             open_url(asig)
             rkrl = False
         hora_ref += 1
-    if rkrl: open_url(rr)
+    if rkrl and hora_diablo < hora:
+        open_url(rr)
+    elif day_name[day] == 'Thursday':
+        open_url(ph)
 
 ##########################################################################
 # Viernes
@@ -105,14 +118,21 @@ if day_name[day] == 'Friday':
             open_url(asig)
             rkrl = False
         hora_ref += 1
-    if rkrl: open_url(rr)
+    if rkrl and hora_diablo < hora:
+        open_url(rr)
+    elif day_name[day] == 'Friday':
+        open_url(ph)
 
 ##########################################################################
 ################## ᕦ( ͡° ͜ʖ ͡°)ᕤ EL FINDE ¯\_(ツ)_/¯ ######################
 ##########################################################################
 
-if day_name[day] == 'Saturday':
-    open_url('https://www.youtube.com/watch?v=MpqGPJz5aQY')
+if day_name[day] == 'Saturday' and hora_diablo < hora:
+    open_url(no_hay)
+else:
+    open_url(ph)
 
-if day_name[day] == 'Sunday':
-    open_url('https://www.youtube.com/watch?v=Vz1-R3UKVuw')
+if day_name[day] == 'Sunday' and hora_diablo < hora :
+    open_url(si_hay)
+else:
+    open_url(ph)
