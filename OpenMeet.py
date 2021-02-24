@@ -33,7 +33,7 @@ date = datetime
 now = date.now()
 hora = now.hour
 minuto = now.minute
-day = 3
+day = now.weekday()
 day_name = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 rkrl = True
