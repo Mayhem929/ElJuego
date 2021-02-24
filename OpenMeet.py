@@ -11,7 +11,7 @@ mp_teoria = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=' + auth_user
 mp_pract  = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
 fs        = 'https://meet.google.com/brs-jtop-ivv?pli=1&authuser=' + auth_user
 geo       = 'https://meet.google.com/fku-gqfb-ybw?pli=1&authuser=' + auth_user
-calc      = 'https://meet.google.com/jfy-mqvy-ceb?pli=1&authuser=' + auth_user
+calc      = 'https://meet.google.com/nta-ggiq-bxz?pli=1&authuser=' + auth_user
 edip1     = 'https://meet.google.com/bqh-etiv-tta?pli=1&authuser=' + auth_user
 edip2     = 'https://meet.google.com/wmb-uufq-kdy?pli=1&authuser=' + auth_user
 edip3     = 'https://meet.google.com/ovy-thqp-gtg?pli=1&authuser=' + auth_user
