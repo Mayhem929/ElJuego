@@ -7,19 +7,21 @@ from datetime import datetime
 
 auth_user = '5'
 
-mp_teoria = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=' + auth_user
-mp_pract  = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
-fs        = 'https://meet.google.com/brs-jtop-ivv?pli=1&authuser=' + auth_user
-geo       = 'https://meet.google.com/fku-gqfb-ybw?pli=1&authuser=' + auth_user
-calc      = 'https://meet.google.com/nta-ggiq-bxz?pli=1&authuser=' + auth_user
-edip1     = 'https://meet.google.com/bqh-etiv-tta?pli=1&authuser=' + auth_user
-edip2     = 'https://meet.google.com/wmb-uufq-kdy?pli=1&authuser=' + auth_user
-edip3     = 'https://meet.google.com/ovy-thqp-gtg?pli=1&authuser=' + auth_user
-mn        = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=' + auth_user
-rr        = 'https://youtu.be/bxqLsrlakK8'
-ph        = 'https://es.pornhub.com/'
-no_hay    = 'https://www.youtube.com/watch?v=MpqGPJz5aQY'
-si_hay    = 'https://www.youtube.com/watch?v=Vz1-R3UKVuw'
+mp_teoria   = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=' + auth_user
+mp_pract    = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
+fs          = 'https://meet.google.com/brs-jtop-ivv?pli=1&authuser=' + auth_user
+geo         = 'https://meet.google.com/fku-gqfb-ybw?pli=1&authuser=' + auth_user
+calc        = 'https://meet.google.com/nta-ggiq-bxz?pli=1&authuser=' + auth_user
+edip1       = 'https://meet.google.com/bqh-etiv-tta?pli=1&authuser=' + auth_user
+edip2       = 'https://meet.google.com/wmb-uufq-kdy?pli=1&authuser=' + auth_user
+edip3       = 'https://meet.google.com/ovy-thqp-gtg?pli=1&authuser=' + auth_user
+mn          = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=' + auth_user
+rr          = 'https://youtu.be/bxqLsrlakK8'
+ph          = 'https://es.pornhub.com/'
+no_hay      = 'https://www.youtube.com/watch?v=MpqGPJz5aQY'
+si_hay      = 'https://www.youtube.com/watch?v=Vz1-R3UKVuw'
+
+
 ##########################################################################
 # Funcion para abrir la pestaña
 
@@ -37,13 +39,14 @@ minuto = now.minute
 day = now.weekday()
 day_name = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
-rkrl = True
+bool_rr = True
+bool_ph = True
+hora_diablo = 6
 
 ##########################################################################
 # Lunes
 
 hora_ref = 17
-hora_diablo = 6
 
 if day_name[day] == 'Monday':
 
@@ -53,9 +56,9 @@ if day_name[day] == 'Monday':
         open_url(mp_pract)
     elif hora_diablo < hora:
         open_url(rr)
-    elif day_name[day] == 'Monday':
-    	open_url(ph)
-	
+    else:
+        open_url(ph)
+
 ##########################################################################
 # Martes
 
@@ -67,7 +70,7 @@ if day_name[day] == 'Tuesday':
         open_url(fs)
     elif hora_diablo < hora:
         open_url(rr)
-    elif day_name[day] == 'Tuesday':
+    else:
         open_url(ph)
 
 ##########################################################################
@@ -81,13 +84,13 @@ if day_name[day] == 'Wednesday':
         if (hora == hora_ref - 1 and minuto >= min_ref) or \
                 (hora == hora_ref and minuto < min_ref):
             open_url(asig)
-            rkrl = False
+            bool_rr = False
+            bool_ph = False
         hora_ref += 1
-    if rkrl and hora_diablo < hora:
+    if bool_rr and hora_diablo < hora:
         open_url(rr)
-    elif day_name[day] == 'Wednesday':
+    if bool_ph and hora_diablo >= hora:
         open_url(ph)
-
 
 ##########################################################################
 # Jueves
@@ -99,11 +102,12 @@ if day_name[day] == 'Thursday':
         if (hora == hora_ref - 1 and minuto >= min_ref) or \
                 (hora == hora_ref and minuto < min_ref):
             open_url(asig)
-            rkrl = False
+            bool_rr = False
+            bool_ph = False
         hora_ref += 1
-    if rkrl and hora_diablo < hora:
+    if bool_rr and hora_diablo < hora:
         open_url(rr)
-    elif day_name[day] == 'Thursday':
+    if bool_ph and hora_diablo >= hora:
         open_url(ph)
 
 ##########################################################################
@@ -116,23 +120,26 @@ if day_name[day] == 'Friday':
         if (hora == hora_ref - 1 and minuto >= min_ref) or \
                 (hora == hora_ref and minuto < min_ref):
             open_url(asig)
-            rkrl = False
+            bool_rr = False
+            bool_ph = False
         hora_ref += 1
-    if rkrl and hora_diablo < hora:
+    if bool_rr and hora_diablo < hora:
         open_url(rr)
-    elif day_name[day] == 'Friday':
+    if bool_ph and hora_diablo >= hora:
         open_url(ph)
 
 ##########################################################################
 ################## ᕦ( ͡° ͜ʖ ͡°)ᕤ EL FINDE ¯\_(ツ)_/¯ ######################
 ##########################################################################
 
-if day_name[day] == 'Saturday' and hora_diablo < hora:
-    open_url(no_hay)
-else:
-    open_url(ph)
+if day_name[day] == 'Saturday':
+    if hora_diablo < hora:
+        open_url(no_hay)
+    else:
+        open_url(ph)
 
-if day_name[day] == 'Sunday' and hora_diablo < hora :
-    open_url(si_hay)
-else:
-    open_url(ph)
+if day_name[day] == 'Sunday':
+    if hora_diablo < hora:
+        open_url(si_hay)
+    else:
+        open_url(ph)
