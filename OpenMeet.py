@@ -5,13 +5,15 @@ from datetime import datetime
 ##########################################################################
 # Enlaces Google Meet. Pueden variar de usuario a otro, recomiendo revisarlas
 
-mp_teoria = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=1'
-mp_pract = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=1'
-fs = 'https://meet.google.com/brs-jtop-ivv?pli=1&authuser=1'
-geo = 'https://meet.google.com/fku-gqfb-ybw?pli=1&authuser=1'
-calc = 'https://meet.google.com/gbj-pvsd-yci?authuser=1'
+auth_user = 1
+
+mp_teoria = 'https://meet.google.com/mme-zppa-ptf?pli=1&authuser=' + auth_user
+mp_pract = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
+fs = 'https://meet.google.com/brs-jtop-ivv?pli=1&authuser=' + auth_user
+geo = 'https://meet.google.com/fku-gqfb-ybw?pli=1&authuser=' + auth_user
+calc = 'https://meet.google.com/sgo-fqpd-hko?pli=1&authuser=' + auth_user
 edip = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-mn = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=1'
+mn = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=' + auth_user
 
 ##########################################################################
 # Funcion para abrir la pestaña
