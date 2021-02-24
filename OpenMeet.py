@@ -12,7 +12,7 @@ mp_pract = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
 fs = 'https://meet.google.com/brs-jtop-ivv?pli=1&authuser=' + auth_user
 geo = 'https://meet.google.com/fku-gqfb-ybw?pli=1&authuser=' + auth_user
 calc = 'https://meet.google.com/sgo-fqpd-hko?pli=1&authuser=' + auth_user
-edip = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+edip = 'https://youtu.be/bxqLsrlakK8'
 mn = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=' + auth_user
 
 ##########################################################################
