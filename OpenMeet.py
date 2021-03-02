@@ -50,7 +50,7 @@ hora_ref = 17
 
 if day_name[day] == 'Monday':
 
-    if hora_ref - 2 < hora < hora_ref:
+    if hora_ref - 2 <= hora < hora_ref:
         open_url(mp_teoria)
     elif hora_ref < hora < hora_ref + 2:
         open_url(mp_pract)
@@ -66,7 +66,7 @@ hora_ref = 17
 
 if day_name[day] == 'Tuesday':
 
-    if hora_ref - 2 < hora < hora_ref + 2:
+    if hora_ref - 2 <= hora < hora_ref + 2:
         open_url(fs)
     elif hora_diablo < hora:
         open_url(rr)
