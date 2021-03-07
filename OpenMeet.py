@@ -12,9 +12,9 @@ mp_pract    = 'https://meet.google.com/tiu-gzpp-gfq?pli=1&authuser=' + auth_user
 fs          = 'https://meet.google.com/brs-jtop-ivv?pli=1&authuser=' + auth_user
 geo         = 'https://meet.google.com/fku-gqfb-ybw?pli=1&authuser=' + auth_user
 calc        = 'https://classroom.google.com/u/' + auth_user + '/c/MjQ3NjUwNjI0NDA2'
-edip1       = 'https://meet.google.com/bqh-etiv-tta?pli=1&authuser=' + auth_user
-edip2       = 'https://meet.google.com/wmb-uufq-kdy?pli=1&authuser=' + auth_user
-edip3       = 'https://meet.google.com/ovy-thqp-gtg?pli=1&authuser=' + auth_user
+edip1       = 'https://webmailest.ugr.es/?_task=mail&_mbox=INBOX'
+edip2       = 'https://webmailest.ugr.es/?_task=mail&_mbox=INBOX'
+edip3       = 'https://webmailest.ugr.es/?_task=mail&_mbox=INBOX'
 mn          = 'https://meet.google.com/oej-ooub-tuq?pli=1&authuser=' + auth_user
 rr          = 'https://youtu.be/bxqLsrlakK8'
 ph          = 'https://es.pornhub.com/'
