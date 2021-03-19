@@ -32,6 +32,8 @@ def open_url(url):
 ##########################################################################
 # Encontramos la hora y dia actual
 
+
+
 date = datetime
 now = date.now()
 hora = now.hour
