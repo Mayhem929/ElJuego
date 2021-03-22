@@ -2,7 +2,7 @@ import webbrowser
 from datetime import datetime
 #alta grrrrrrrrrrrrr
 ##########################################################################
-##########################################################################
+#####################################################################
 # Enlaces Google Meet. Pueden variar de usuario a otro, recomiendo revisarlas
 
 auth_user = '1'
